@@ -1,0 +1,25 @@
+server:
+  port: 2100
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: false
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8260/eureka/
+  instance:
+    prefer-ip-address: true
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/a?serverTimezone = GMT
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: studentserver
+  main:
+    allow-bean-definition-overriding: true
